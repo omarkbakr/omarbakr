@@ -1,0 +1,75 @@
+Public Class Form1
+ 
+Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+Dim W, Win, H, hin, hL, wL As Integer
+W = 350 : H = 500 : Win = W - 16 : hin = H - 40
+Me.Text = "الطالب بيانات "
+Me.Width = W : Me.Height = H
+hL = hin / 8 : wL = Win / 2 
+Label1.Left = wL : Label1.Top = 0
+Label1.Width = Win : Label1.Height = hL 
+Label1.Text = " الطالب اسم"
+Label1.BackColor = Color.SkyBlue 
+Label1.AutoSize = False
+Label2.Left = wL : Label2.Top = hL 
+Label2.Width = wL : Label2.Height = hL 
+Label2.Text = " الجلوس رقم" 
+Label2.BackColor = Color.Yellow 
+Label2.AutoSize = False
+Label3.Left = wL : Label3.Top = 2 * hL 
+Label3.Width = wL : Label3.Height = hL 
+Label3.Text = " الميالد تاريخ " 
+Label3.BackColor = Color.SkyBlue 
+Label3.AutoSize = False
+Label4.Left = wL : Label4.Top = 3 * hL 
+Label4.Width = wL : Label4.Height = hL 
+Label4.Text = "القومي الرقم" 
+Label4.BackColor = Color.Yellow 
+Label4.AutoSize = False
+Label5.Left = 0 : Label5.Top = 0 
+Label5.Width = wL : Label5.Height = hL 
+Label5.Text = ""
+Label5.BackColor = Color.DarkSalmon
+       Label5.AutoSize = False 
+       Label6.Left = 0 : Label6.Top = hL
+
+Label6.Width = wL : Label6.Height = hL 
+Label6.Text = ""
+Label6.BackColor = Color.LightGreen 
+Label6.AutoSize = False
+Label7.Left = 0 : Label7.Top = 2 * hL 
+Label7.Width = wL : Label7.Height = hL 
+Label7.Text = ""
+Label7.BackColor = Color.DarkSalmon 
+Label7.AutoSize = False
+Label8.Left = 0 : Label8.Top = 3 * hL 
+Label8.Width = wL : Label8.Height = hL 
+Label8.Text = ""
+Label8.BackColor = Color.LightGreen 
+Label8.AutoSize = False
+Button1.Left = 0 : Button1.Top = 4 * hL 
+Button1.Width = 2 * wL : Button1.Height = hL 
+Button1.Text = "سجل البيانات" 
+Button1.BackColor = Color.SkyBlue 
+Button2.Left = 0 : Button2.Top = 5 * hL 
+Button2.Width = 2 * wL : Button2.Height = hL 
+Button2.Text = "اذهب الي ذكريات وطن" 
+Button2.BackColor = Color.SkyBlue
+ 
+End Sub
+
+  Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+If Label1.Text = " الطالب اسم" Then
+     Label5.Text = "​"
+ElseIf Label2.Text = " الجلوس رقم" Then 
+     Label6.Text = "​"
+ElseIf Label3.Text = " الميالد تاريخ" 
+     Then Label7.Text = "​"
+ElseIf Label4.Text = "القومي الرقم " 
+     Then Label8.Text = "​"
+
+ 
+End If End Sub
+Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+Form2.Show() End Sub
+End Class
